@@ -44,5 +44,3 @@ Feature: Title of your feature
  @TestKumar
   Scenario: Title of your scenario
     Hello this is test
-    ywey
-    gedsg ry
