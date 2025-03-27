@@ -43,10 +43,4 @@ Feature: Title of your feature
       
  @TestKumar
   Scenario: Title of your scenario
-    Given Login to Naukri
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+    Hello this is test
