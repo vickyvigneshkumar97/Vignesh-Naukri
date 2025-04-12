@@ -1,10 +1,10 @@
 
 @Login
-Feature: Naukri Application Login Functionality
+Feature: Naukri Web Application Login Functionality
 
 
  @invalidLogin
- Scenario Outline: Invalid Login Credentails for Naukri Application
+ Scenario Outline: Invalid Login Credentails for Naukri Web Application
   Given  Launch the Naukri Web Application Link
   When Enter the Username as "<username>" and Password as "<password>"
   And Click on Login button
@@ -17,7 +17,7 @@ Feature: Naukri Application Login Functionality
   
   
  @validLogin
- Scenario: Valid Login Credentails for Naukri Application
+ Scenario: Valid Login Credentails for Naukri Web Application
   Given  Launch the Naukri Web Application Link
   When Enter the Username as "xxxxxxx" and Password as "xxxxxx"
   And Click on Login button
