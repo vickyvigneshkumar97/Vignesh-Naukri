@@ -1,46 +1,24 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
 
-  @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+@Login
+Feature: Naukri Web Application Login Functionality
 
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
 
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
-      
- @TestKumar
-  Scenario: Title of your scenario
-    Hello this is test
+ @invalidLogin
+ Scenario Outline: Invalid Login Credentails for Naukri Web Application
+  Given  Launch the Naukri Web Application Link
+  When Enter the Username as "<username>" and Password as "<password>"
+  And Click on Login button
+  Then Verify the "<status>" of login based on credentials
+  
+  Examples:
+  | username       | password      | status                                                             |
+  | hello@abc.com  | hello@12345   | Invalid details. Please check the Email ID - Password combination. |
+  | kumar@test.com | kumar@12345   | Invalid details. Please check the Email ID - Password combination. |
+  
+  
+ @validLogin
+ Scenario: Valid Login Credentails for Naukri Web Application
+  Given  Launch the Naukri Web Application Link
+  When Enter the Username as "xxxxxxx" and Password as "xxxxxx"
+  And Click on Login button
+  Then You should be landed in home page of Naukri
